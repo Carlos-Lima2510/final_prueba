@@ -61,7 +61,7 @@ SELECT * FROM prestamo WHERE duracion = 4 UNION SELECT * FROM prestamo WHERE fec
 
 -- Reunion Natural --
 
-SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu NATURAL JOIN Usuarios AS u;
+SELECT u.nombre, pu.prestamo_id, p.duracion FROM prestamo AS p NATURAL JOIN prestamo_usuario AS pu NATURAL JOIN Usuarios AS u;
 
 -- Reunion Natural por la izquierda --
 
