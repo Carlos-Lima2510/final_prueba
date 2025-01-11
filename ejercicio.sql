@@ -24,7 +24,7 @@ CREATE TABLE libros (
     titulo VARCHAR(255),
     año_publicacion YEAR,
     editorial VARCHAR(255),
-    ejemplares_disponibles
+    ejemplares_disponibles INT
 )ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 INSERT INTO libros (titulo, año_publicacion, editorial, ejemplares_disponibles) VALUES
