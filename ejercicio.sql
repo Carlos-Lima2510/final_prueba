@@ -1,4 +1,33 @@
--- Aqui van las tablas de cada uno -- 
+-- Tabla de Alejandro Juárez - Usuarios --
+
+CREATE TABLE IF NOT EXISTS `Usuarios` ( usuario_id INT AUTO_INCREMENT PRIMARY KEY, nombre VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, correo_electronico VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci UNIQUE NOT NULL, fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO `Usuarios` (nombre, correo_electronico) VALUES ('Alejandro Juárez', 'alejandro.juarez@fenix.com'), ('Carlos Lima', 'carlos.lima@fenix.com'), ('Miguel Rivas', 'miguel.rivas@fenix.com'), ('Kelvia Neves', 'kelvia.neves@fenix.com'), ('Manuel Muñoz', 'manuel.muñoz@fenix.com');
+
+-- Tabla de Carlos Alvarado - Prestamos --
+
+CREATE TABLE IF NOT EXISTS prestamo (
+    id_prestamo int PRIMARY KEY AUTO_INCREMENT,
+    fecha_registro timestamp DEFAULT CURRENT_TIMESTAMP not null,
+    duracion int not null,
+    fecha_fin datetime not null
+) ENGINE=MyISAM CHARSET=utf8 COLLATE=utf8mb3_general_ci;
+
+INSERT INTO prestamo (duracion, fecha_fin)
+VALUES (4, "2025-01-16 00:00:00"),
+        (4, "2024-01-15 00:00:00"),
+        (6, "2025-01-17 00:00:00");
+
+CREATE TABLE IF NOT EXISTS prestamo_usuario (
+    prestamo_usuario_id int PRIMARY KEY AUTO_INCREMENT,
+    usuario_id int not null,
+    prestamo_id int not null
+) ENGINE=MyISAM CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO prestamo_usuario (usuario_id, prestamo_id)
+VALUES (1, 1);
+
+
 CREATE TABLE autores (
     id_autor INT AUTO_INCREMENT PRIMARY KEY, 
     nombre VARCHAR(100),      
