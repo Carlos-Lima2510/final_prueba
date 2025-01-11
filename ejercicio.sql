@@ -38,3 +38,22 @@ INSERT INTO libros (titulo, año_publicacion, editorial, ejemplares_disponibles)
 ('Demon Slayer', 2016, 'Shueisha', 12),
 ('Bleach', 2001, 'Shueisha', 9),
 ('Tokyo Ghoul', 2011, 'Shueisha', 6);
+
+CREATE TABLE autores_libros (
+    id_autor INT NOT NULL,  
+    id_libro INT NOT NULL,    
+    PRIMARY KEY (id_autor, id_libro), 
+    FOREIGN KEY (id_autor) REFERENCES autores(id_autor) 
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_libro) REFERENCES libros(id_libro) 
+        ON DELETE CASCADE ON UPDATE CASCADE
+)
+ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO autores_libros (id_autor, id_libro) VALUES
+(1, 1), 
+(2, 2),
+(3, 3), 
+(4, 4), 
+(5, 5), 
+(6, 6); 
