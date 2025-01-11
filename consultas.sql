@@ -75,6 +75,11 @@ SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu RIGHT JOIN Usuarios 
 
 SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu CROSS JOIN Usuarios AS u ON pu.usuario_id = u.usuario_id;
 
+-- Consulta Extra --
+
+SELECT u.nombre, pu.prestamo_id, p.duracion FROM prestamo AS p RIGHT JOIN prestamo_usuario AS pu ON p.prestamo_id = pu.prestamo_id LEFT JOIN Usuarios AS u ON u.usuario_id = pu.usuario_id;
+
+
 END //
 
 DELIMITER ;
