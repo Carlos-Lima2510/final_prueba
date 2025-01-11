@@ -59,6 +59,22 @@ SELECT AVG(duracion) FROM prestamo;
 
 SELECT * FROM prestamo WHERE duracion = 4 UNION SELECT * FROM prestamo WHERE fecha_registro > '2025-01-01 00:00:00:';
 
+-- Reunion Natural --
+
+SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu NATURAL JOIN Usuarios AS u;
+
+-- Reunion Natural por la izquierda --
+
+SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu LEFT JOIN Usuarios AS u ON pu.usuario_id = u.usuario_id;
+
+-- Reunion Natural por la derecha --
+
+SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu RIGHT JOIN Usuarios AS u ON pu.usuario_id = u.usuario_id;
+
+-- Producto Cartesiano --
+
+SELECT u.nombre, pu.prestamo_id FROM prestamo_usuario AS pu CROSS JOIN Usuarios AS u ON pu.usuario_id = u.usuario_id;
+
 END //
 
 DELIMITER ;
