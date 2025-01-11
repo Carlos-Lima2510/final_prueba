@@ -15,3 +15,4 @@ CREATE TABLE IF NOT EXISTS prestamo (
 
 INSERT INTO prestamo (duracion, fecha_fin)
 VALUES (4, "2025-01-16 00:00:00");
+manuel
