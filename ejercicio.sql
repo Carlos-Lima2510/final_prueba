@@ -1,10 +1,11 @@
 -- Aqui van las tablas de cada uno -- 
 CREATE TABLE autores (
-    id INT AUTO_INCREMENT PRIMARY KEY, 
-    nombre VARCHAR(100) NOT NULL,      
-    pais_origen VARCHAR(100) NOT NULL, 
-    fecha_nacimiento DATE NOT NULL  
-);
+    id_autor INT AUTO_INCREMENT PRIMARY KEY, 
+    nombre VARCHAR(100),      
+    pais_origen VARCHAR(100), 
+    fecha_nacimiento DATE  
+) 
+ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 INSERT INTO autores (nombre, pais_origen, fecha_nacimiento) VALUES
 ('Masashi Kishimoto', 'Japón', '1974-11-08'), 
