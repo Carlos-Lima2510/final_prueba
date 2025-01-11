@@ -57,7 +57,7 @@ SELECT AVG(duracion) FROM prestamo;
 
 -- Union --
 
-SELECT * FROM pestamo WHERE duracion = 4 UNION SELECT * FROM prestamo WHERE fecha_registro > '2025-01-01 00:00:00:';
+SELECT * FROM prestamo WHERE duracion = 4 UNION SELECT * FROM prestamo WHERE fecha_registro > '2025-01-01 00:00:00:';
 
 END //
 
