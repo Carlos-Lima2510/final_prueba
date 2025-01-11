@@ -1,11 +1,11 @@
 -- Aqui van las tablas de cada uno -- 
 CREATE TABLE libros (
     id_libro INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(255) NOT NULL,
-    año_publicacion YEAR NOT NULL,
-    editorial VARCHAR(255) NOT NULL,
-    ejemplares_disponibles INT NOT NULL
-);
+    titulo VARCHAR(255),
+    año_publicacion YEAR,
+    editorial VARCHAR(255),
+    ejemplares_disponibles
+)ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 INSERT INTO libros (titulo, año_publicacion, editorial, ejemplares_disponibles) VALUES
 ('Naruto', 1999, 'Shueisha', 10),
